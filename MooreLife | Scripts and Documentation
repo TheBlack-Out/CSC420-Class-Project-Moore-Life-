@@ -1,0 +1,116 @@
+/* Google Doc Link with liturature and other plans
+ * and documentation
+ */
+//https://docs.google.com/document/d/1Q3b8uCWRD9Qk3jO_pCDFv84PrR6kKBLC-nSdW88RO2Q/edit
+//----------------------------------------------------------------------------------------
+CSC 420-Software Engineering w/ T. Kentopp
+
+Group members:
+Fanus, Kajeede -database manager
+LaPlace, Lorenzo -back end manager
+Laudat, Lakeesha - GUI/front end and project manager
+
+
+
+Schedules: 
+
+Lorenzo: 
+Mon - 4pm until...
+Tue -Thur -3pm until...
+Fri - 11am - 2pm
+Lakeesha: free from...
+Monday.  | 11am - 12pm then again 1pm to 3pm Tuesday. | 11am until 5pm
+Wednesday. | 11am - 3pm
+Thursday. |  12:30pm - 5pm
+Friday. |       11am - 5pm
+
+Kajeede: Free from…
+Mondays and Fridays: free after 1:00pm
+Tuesdays, Wednesdays, and Thursdays: Free after 6:00pm
+
+Project Description 
+Linear interactive story.
+Features the option to pursue 2 story lines. African American in poverty, African royalty
+Give a scenario where your solution would be used. 
+Project Topic: MooreLife Interactive 
+Project Goals: Interactive life simulation on two people who come from two different means of life. Every game is different based on your choices. 
+Inspiration: the sims, Episodes...goat simulator 
+Why:
+Interactive Story Games Are Trending
+Written by Adam Blacker | March 05, 2018 from blog.apptopia.com
+
+
+Storytelling has been around as long as humans have. Whether it be in the form of cave paintings or for the reason of explaining why the sun rises and falls every day. The tradition takes places across every culture and every race. Fast forward to 2018 and we’ve continued this love for a good story into our mobile apps. Two popular vehicles have been having success in the top charts, enough to catch my eye.
+
+Interactive story games enable their users to create and build upon their own stories and live out lives or experiences that are not their own. Chat fiction apps take a different approach and put their users in the position of a voyeur, watching someone else's story unfold through text messages on their personal device.
+
+
+GROUP USING AGILE SCRUM project management
+Why: Modern management, most beneficial experience wise, proven to be the best mechanism. 
+Mock Up: [link]
+https://docs.google.com/document/d/19pb7X9AO4g67l7l4_rvO0HRuUqAJWQdFo0wKtcBy3hY/edit
+Script:
+Welcome page:
+You're now registered name! Let's proceed to the game.
+Choose a symbol. [Ω] | [θ]
+ChildhoodΩ:
+Welcome to MooreLife name Nyimbia Iguru. You were born into a life of opulence. You want and need for nothing as you were born into Ugandan royalty.
+It’s a sunny afternoon, you’re on a family vacation in Belize`  
+AdolescenseΩ:
+
+AdulthoodΩ:
+
+GoldenYearsΩ:
+
+____________________________________________________________________________
+Childhoodθ:
+Welcome to MooreLife name Johnson. Born into hard times, you are raised by a single parent and your closest confidant is your imaginary friend Pojo. [illustrate]
+It’s a drab monday evening, the rain is making significant progress in dousing the streets, while playing with some dust specs on the window sill you noticed a white orb of light retreat behind the abandoned shack across the street. [illustrate]  
+Go check it out | Notify your moma [Buttons] 
+CheckItOut:
+What was that?! You sprint towards the scene, despite the unknowns. Down the street and around the shack you go but there is nothing there… What will you  do next. 
+[Go inside] | [go home]
+Go home:
+Convinced that you imagined the whole ordeal, you walk home in disappointment. The rest of your childhood is one of self doubt and low self esteem. =>AdolescenceθEmo
+Go inside: 
+Determined to satisfy your curiosity, you venture into the dark grungy shack. After checking every possible hiding place in the shake, interest fades and the decision to retreat home seems reasonable, but as soon as you begin to leave a violent beam of light came bursting through the wooden floors of the shack up to the sky and in that beam emerged a ship of mighty means. You hide behind some planks to observe the ship, and as you did a horrid creature draped in silk emerged from the ship and teleported behind you. And it was the last thing you see as your vision fades.  =>AdolescenceθConfi
+Notify:
+You run to your mother, blabbing to her, all that you’ve witnessed. She ignores you at first but your persistence sends her into a rage which stains your relationship and leaves you devastated and confused. 
+[See what happens next?]AdolescenceθEmo:
+| [End the game?]You die
+AdolescenceθEmo:
+You wade through most of your teen years. It's already your senior year of high school and you want a redo since you've shied away from anything too social due solely on the violent experiences passed on from your mother. You second guess every move leading to a life of mistrust and low confidence. Yet you yearn for a change. “This year will be different!” you say confidently with a slight linger of doubt. [Plan Your Success]|[Its not worth it]
+AdolescenceθConfi: 
+
+Adulthoodθ:
+
+GoldenYearsθ:
+
+Kajeede Fanus
+Interests: Coding, Hardware, fixing anything hardware related (ITS)
+Experience: Coding within Java, HTML, and MySQL respectively, fixing Wi-Fi access points and CPU’s, testing hardware for bugs, and creating documents for Microsoft Word, PowerPoint, and Excel.
+
+Lorenzo LaPlace
+Interests: Coding, algorithms, setting up web based environment and connectivity between front bbbhhhend and back end. 
+Experience: Coding in Java and HTML. Creating and organizing MySQL database. Working with JSP and Servlet. Algorithmic design in Java. Creating PowerPoint presentations. 
+
+** Talk about what we would like to gain from the term project such as learn more about web based development, etc
+Deeper understanding of dealing with web based applications, both front and back end creating creation and management.
+To gain experience in developing entertainment software.
+
+** Go on edx website and look at web development material (three tier applications)
+
+**Post screenshot of our working component in GitHub after we complete each step of the process
+
+** Look into implementing graphics in MySQL and other data types
+** Check out saving game progress as variables in MySQL
+
+Lakeesha Laudat
+Interests:Software development, both pc and mobile based. Hardware, functionalities and history.
+Experience:Programming: Java, Python, C++, SQL, Ruby, html, jsp, servlets
+Environments: NetBeans, MySQL Workbench, dbms and database design.
+ Cruzian Apocalypse
+____________________________________________________________________________
+Abstract: What would you do if you witnessed the fall of your nation? Virgin Islanders, along with many of our fellow Caribbean islanders recently had a first hand experience on what it means to lose it all. On St. Croix, Hurricane Maria had no mercy on our people. Before that, the situation was worst on St. Thomas after the impact of Hurricane Irma. Despite that, with the aid of our fellow Americans and the will of our people to seek out normalcy, we as a community have managed to bounce back our infrastructure and economy to a better state than they were before the hurricanes made their visit. 
+
+Inspired by the hardships yet perseverance shown by the people, and the a random though from our Professor, CyberFy LLC brings to you The Cruzian Apocalypse   
