@@ -12,13 +12,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <center>
-        <h1>Create an Account!</h1>
+    <center>
+        <h1>Create an Account (cont)!</h1>
     </center>
-    <form name = "NewServlet" action = "NewServlet" method = "POST">
-        Username: <input type = "text" name = "first_name">
+    <form name = "CompleteRegistration" action = "UserRegistered" method = "POST">
+        Username: <input type = "text" name = "username">
         <br />
-        Password: <input type = "text" name = "last_name">
+        Password: <input type = "password" name = "password">
+        <br />
+        User Key: <input type ="number" name="user_key" pattern="^(?=.*[/d]){4}$">
         <br />
         <input type = "submit" value = "Finish Registration" />
     </form>

@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author MartyGott
  */
-@WebServlet(name = "NewServlet", urlPatterns = {"/NewServlet"})
+@WebServlet(name = "UserRegistered", urlPatterns = {"/UserRegistered"})
 public class UserRegistered extends HttpServlet {
 
     /**
@@ -79,61 +79,59 @@ public class UserRegistered extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String fname = request.getParameter("first_name");
+        String lname = request.getParameter("last_name");
+        String email = request.getParameter("email");
+        String age = request.getParameter("age");
+        int a = Integer.parseInt(age);
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String userkey = request.getParameter("user_key");
+        int usrkey = Integer.parseInt(userkey);
         Connection conn = null;
         String url = "jdbc:mysql://localhost:3306/";
-        String dbName = "Asgnmnt2BackEnd";
+        String dbName = "CSC420Project";
         String driver = "com.mysql.jdbc.Driver";
         PrintWriter pw = response.getWriter();
-        String msg = " ";
 
-        // String msg2 = " ";
-        int a = Integer.parseInt(Age);
-        if (a < 18) {
-            pw.println("Sorry " + Fname + ", you are too young to proceed");
-        } else {
-            pw.println("Welcome " + Fname + " " + Lname);
+        try {
 
-            try {
+            Class.forName(driver).newInstance();
+            conn = DriverManager.getConnection(url + dbName, "root", "TOl0Pok#4");
+            PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into Moore_Life_Members values (?,?,?,?,?,?)");
 
-                Class.forName(driver).newInstance();
-                conn = DriverManager.getConnection(url + dbName, "root", "TOl0Pok#4");
-                PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into membership values (?,?,?,?)");
+            pst.setString(1, fname);
+            pst.setString(2, lname);
+            pst.setString(3, email);
+            pst.setInt(4, a);
+            pst.setString(5, username);
+            pst.setString(6, password);
 
-                pst.setString(1, Fname);
-                pst.setString(2, Lname);
-                pst.setString(3, Email);
-                pst.setInt(4, a);
+            int i = pst.executeUpdate();
+            String msg = " ";
+            if (i != 0) {
+                msg = "New record has been inserted";
+                pw.println("<font size='5' color=blue>" + msg + "</font>");
 
-                int i = pst.executeUpdate();
-                if (i != 0) {
-                    // msg = "Record has been inserted" + "\n";
-                    msg = "Registration Successful!" + "\n";
-                    pw.println("<font size='6' color=blue>" + msg + "</font>");
-
-                } else {
-                    msg = "An error has occurred. Registration unsuccessful.";
-                    pw.println("<font size='6' color=blue>" + msg + "</font>");
-                }
-                pst.close();
-
-            } catch (Exception e) {
-                pw.println(e);
+            } else {
+                msg = "Failed to insert the record";
+                pw.println("<font size='5' color=red>" + msg + "</font>");
             }
+            pst.close();
+
+        } catch (Exception e) {
+            pw.println(e);
         }
-
-        /**
-         * Returns a short description of the servlet.
-         *
-         * @return a String containing servlet description
-         */
-        @Override
-        public String getServletInfo
-        
-            () {
-        return "Short description";
-        }// </editor-fold>
-
     }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}

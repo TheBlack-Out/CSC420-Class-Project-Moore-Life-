@@ -1,6 +1,6 @@
 <%-- 
     Document   : LoginPage
-    Created on : Oct 14, 2018, 2:04:32 PM
+    Created on : Oct 28, 2018, 3:28:01 PM
     Author     : MartyGott
 --%>
 
@@ -12,19 +12,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <center>
-        <h1>Create an Account!</h1>
+    <center>
+        <h1>Please enter your Username and Password</h1>
     </center>
     <form name = "LoginArea" action = "LoginArea" method = "POST">
-        Username: <input type = "text" name = "username">
+        <p style="text-indent: 4em  ">Username: </p> 
+        <p style="text-indent: 4em" > <input type = "text" name = "username"> </p> 
+        <p style="text-indent: 4em  ">Password: </p>
+        <p style="text-indent: 4em" > <input type = "password" name = "password"> </p> 
         <br />
-        Password: <input type = "text" name = "password">
-        <br />
-    
         <input type = "submit" value = "Login" />
     </form>
 
-
-    
 </body>
 </html>
