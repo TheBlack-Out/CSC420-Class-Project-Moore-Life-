@@ -1,7 +1,7 @@
 <%-- 
     Document   : RegistrationPage2
     Created on : Oct 13, 2018, 3:25:01 PM
-    Author     : MartyGott
+    Author     : CyberFy
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
