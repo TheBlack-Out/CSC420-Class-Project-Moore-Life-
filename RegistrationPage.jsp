@@ -1,7 +1,7 @@
 <%-- 
     Document   : RegistrationPage
     Created on : Oct 13, 2018, 3:09:21 PM
-    Author     : MartyGott
+    Author     : CyberFy
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registration | Cruzian Apocalypto </title>
     </head>
     <body>
         <center>
@@ -54,7 +54,7 @@
         
         <script>
         function myFunction3() {
-            var y = document.getElementById("myage").value;
+            var y = document.getElementById("myzip").value;
             document.getElementById("demo2").innerHTML = y;
         }
     </script>
