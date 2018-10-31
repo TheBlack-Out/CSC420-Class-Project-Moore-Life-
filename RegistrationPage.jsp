@@ -9,13 +9,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registration Page</title>
     </head>
     <body>
     <center>
         <h1>Create an Account!</h1>
     </center>
-    <form name = "RegisterPart2" action = "RegistrationPage2.jsp" method = "POST">
+
+  
+
+
+    <form name = "Account Registration" action = "UserRegistered" method = "POST">
+
+
+
         First Name: <input type = "text" name = "first_name">
         <br />
         Last Name: <input type = "text" name = "last_name">
@@ -26,9 +33,15 @@
         Age: <input type = "number" id="myage" name = "age">
         <button onclick="myFunction2()">Enter a number value </button>
         <br />
-
-
-
+        Username: <input type = "text" name = "username">
+        <br />
+        Password: <input type = "password" name = "password">
+        <br />
+        User Key: <input type ="number" name="user_key" >
+        <br />
+        <br />
+        
+        <br />
         <input type = "submit" value = "Next Page" />
     </form>
 

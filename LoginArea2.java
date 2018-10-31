@@ -76,7 +76,7 @@ public class LoginArea2 extends HttpServlet {
         PrintWriter pw = response.getWriter();
         String msg = (String) request.getAttribute("MESSAGE");
         pw.print(msg);
-        
+
     }
 
     /**
@@ -84,7 +84,6 @@ public class LoginArea2 extends HttpServlet {
      *
      * @return a String containing servlet description
      */
-    
     @Override
     public String getServletInfo() {
         return "Short description";

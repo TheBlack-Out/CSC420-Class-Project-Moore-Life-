@@ -104,7 +104,7 @@ public class LoginArea extends HttpServlet {
             while (rs.next()) {
 
                 if (rs.getObject("username").equals(Username)) {
-                    msg = "<font size='6' color=green>" + sentence + Username + "!" + "<br />" + sentence2 +"</font>";
+                    msg = "<font size='6' color=green>" + sentence + Username + "!" + "<br />" + sentence2 + "</font>";
                     request.setAttribute("MESSAGE", msg);
                     RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
                     rd.forward(request, response);

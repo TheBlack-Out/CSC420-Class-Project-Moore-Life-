@@ -44,10 +44,10 @@ public class UserRegistered extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet NewServlet</title>");
+            out.println("<title>Servlet UserRegistered</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet NewServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet UserRegistered at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -79,6 +79,7 @@ public class UserRegistered extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html");
         String fname = request.getParameter("first_name");
         String lname = request.getParameter("last_name");
         String email = request.getParameter("email");
@@ -93,6 +94,7 @@ public class UserRegistered extends HttpServlet {
         String dbName = "CSC420Project";
         String driver = "com.mysql.jdbc.Driver";
         PrintWriter pw = response.getWriter();
+        
 
         try {
 
@@ -110,17 +112,39 @@ public class UserRegistered extends HttpServlet {
             int i = pst.executeUpdate();
             String msg = " ";
             if (i != 0) {
-                msg = "New record has been inserted";
+                msg = "User account has been created.";
                 pw.println("<font size='5' color=blue>" + msg + "</font>");
 
             } else {
-                msg = "Failed to insert the record";
+                msg = "Failed to create new user record";
                 pw.println("<font size='5' color=red>" + msg + "</font>");
             }
             pst.close();
 
         } catch (Exception e) {
             pw.println(e);
+        }
+
+        try {
+            Class.forName(driver).newInstance();
+            conn = DriverManager.getConnection(url + dbName, "root", "TOl0Pok#4");
+            PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into Userkey values (?)");
+
+            pst.setInt(1, usrkey);
+
+            int i = pst.executeUpdate();
+            String msg = " ";
+            if (i != 0) {
+                msg = "<br />" + "New userkey record has also been inserted";
+                pw.println("<font size='5' color=blue>" + msg + "</font>");
+
+            } else {
+                msg = "<br />" + "Failed to insert userkey record";
+                pw.println("<font size='5' color=red>" + msg + "</font>");
+            }
+            pst.close();
+        } catch (Exception e) {
+            pw.println("<br />" + e);
         }
     }
 

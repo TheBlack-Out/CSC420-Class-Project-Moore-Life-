@@ -15,12 +15,23 @@
     <center>
         <h1>Create an Account (cont)!</h1>
     </center>
-    <form name = "CompleteRegistration" action = "UserRegistered" method = "POST">
+    <%
+            request.getParameter("first_name");
+            request.getParameter("last_name");
+            request.getParameter("email");
+            request.getParameter("age");
+            out.println(request.getParameter("first_name"));
+
+        %>
+    
+        <form name = "UserRegistered" action = "UserRegistered" method = "POST">
         Username: <input type = "text" name = "username">
         <br />
         Password: <input type = "password" name = "password">
         <br />
-        User Key: <input type ="number" name="user_key" pattern="^(?=.*[/d]){4}$">
+        User Key: <input type ="number" name="user_key" >
+        <br />
+        <
         <br />
         <input type = "submit" value = "Finish Registration" />
     </form>
