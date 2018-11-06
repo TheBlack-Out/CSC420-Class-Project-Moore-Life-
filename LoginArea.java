@@ -86,11 +86,12 @@ public class LoginArea extends HttpServlet {
         String driver = "com.mysql.jdbc.Driver";
 
         String dbUserName = "root";
-        String dbPassword = "TOl0Pok#4";
+        String dbPassword = "Farfar22Aa";
         String Username = request.getParameter("username");
         String Password = request.getParameter("password");
         String msg = " ";
-        String sentence = "You have been successfully logged in ";
+        String msg2 = " ";
+        String sentence = "You have been logged in ";
         String sentence2 = "Welcome to MooreLife! ";
         String sentence3 = "Sorry no user exists with that name or password ";
         String sentence4 = "Sorry incorrect username / password. Please try again ";
@@ -104,12 +105,14 @@ public class LoginArea extends HttpServlet {
             while (rs.next()) {
 
                 if (rs.getObject("username").equals(Username)) {
-                    msg = "<font size='6' color=green>" + sentence + Username + "!" + "<br />" + sentence2 + "</font>";
+                    msg = "<font size='6' color=green>" + sentence + Username + "</font>";
+                    msg2 = "<font size='6' color=green>" + sentence2 + "</font>";
                     request.setAttribute("MESSAGE", msg);
+                    request.setAttribute("MESSAGE2", msg2);
                     RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
                     rd.forward(request, response);
 
-                } else if (rs.getObject("username").equals(null)) {
+                } else if (rs.getObject("username").equals("")) {
                     msg = "<font size='6' color=red>" + sentence3 + "</font>";
                     request.setAttribute("MESSAGE", msg);
                     RequestDispatcher rd = request.getRequestDispatcher("FailedLogin.jsp");

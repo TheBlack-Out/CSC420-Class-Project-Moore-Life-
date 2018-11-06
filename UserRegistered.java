@@ -91,7 +91,7 @@ public class UserRegistered extends HttpServlet {
         int usrkey = Integer.parseInt(userkey);
         Connection conn = null;
         String url = "jdbc:mysql://localhost:3306/";
-        String dbName = "CSC420Project";
+        String dbName = "CSC420_MooreLifeProject";
         String driver = "com.mysql.jdbc.Driver";
         PrintWriter pw = response.getWriter();
         
@@ -99,7 +99,7 @@ public class UserRegistered extends HttpServlet {
         try {
 
             Class.forName(driver).newInstance();
-            conn = DriverManager.getConnection(url + dbName, "root", "TOl0Pok#4");
+            conn = DriverManager.getConnection(url + dbName, "root", "Farfar22Aa");
             PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into Moore_Life_Members values (?,?,?,?,?,?)");
 
             pst.setString(1, fname);
@@ -127,8 +127,8 @@ public class UserRegistered extends HttpServlet {
 
         try {
             Class.forName(driver).newInstance();
-            conn = DriverManager.getConnection(url + dbName, "root", "TOl0Pok#4");
-            PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into Userkey values (?)");
+            conn = DriverManager.getConnection(url + dbName, "root", "Farfar22Aa");
+            PreparedStatement pst = (PreparedStatement) conn.prepareStatement("insert into user_key values (?)");
 
             pst.setInt(1, usrkey);
 

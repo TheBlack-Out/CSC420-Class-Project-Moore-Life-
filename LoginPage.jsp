@@ -16,12 +16,14 @@
         <h1>Please enter your Username and Password</h1>
     </center>
     <form name = "LoginArea" action = "LoginArea" method = "POST">
-        <p style="text-indent: 4em  ">Username: </p> 
-        <p style="text-indent: 4em" > <input type = "text" name = "username"> </p> 
-        <p style="text-indent: 4em  ">Password: </p>
-        <p style="text-indent: 4em" > <input type = "password" name = "password"> </p> 
         <br />
-        <input type = "submit" value = "Login" />
+        <p style="text-indent: 20em  ">Username: </p> 
+        <p style="text-indent: 20em" > <input type = "text" name = "username"> </p> 
+        <p style="text-indent: 20em  ">Password: </p>
+        <p style="text-indent: 20em" > <input type = "password" name = "password"> </p> 
+        <br />
+        <center> <input type = "submit" value = "Login" /> </center>
+
     </form>
 
 </body>
