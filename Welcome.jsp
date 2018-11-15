@@ -26,7 +26,7 @@
         <br />
     </center>
 
-    <form name="Start Game" action="StartGame.jsp" method="POST">
+    <form name="Start Game" action="Abstract.jsp" method="POST">
         <br />
         <p style="text-indent: 16em  ">Username: </p> 
         <p style="text-indent: 16em" > <input type = "text" id="username" name = "username" readonly> </p>
