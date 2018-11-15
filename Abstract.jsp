@@ -26,7 +26,7 @@
             }
         </style>
     </head>
-    <body link = "white"><center>
+    <body><center>
         <br><br><br><br><br><br><br><br>
         <p>
             What would you do if you witnessed the fall of your nation? 
@@ -45,8 +45,11 @@
             <br><br>
             
         </p>
-        <h4>
-        <a href="http://localhost:8080/420Scenes/Genesis.jsp">Start Game</a>
-        </h4> 
+         <form name="Genesis" action="Genesis.jsp" method="POST">
+             <input type = "submit" value = "Proceed" />
+         </form>
+         <form name="exit" action="Welcome.jsp" method="POST">
+             <input type = "submit" value = "Exit" />
+         </form>
     </center></body>
 </html>
