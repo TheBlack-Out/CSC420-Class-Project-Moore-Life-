@@ -14,6 +14,7 @@ StoryTitle varchar(30) not null, Description varchar(90) not null);
 drop table Moore_Life_Members;
 drop table Userkey;
 drop table levelkey;
+drop table StoryGenre;
 
 insert into Moore_Life_Members values ('Felix', 'Crowley', 'fcrowley@email.com', '18', 'Fella01', 'MNoTy76');
 insert into LevelKey values ('Fella01', '1');
@@ -32,7 +33,6 @@ select * from Moore_Life_Members;
 select * from Userkey;
 select * from LevelKey;
 select username from Moore_Life_Members where username ='Fella01' and userpassword ='MNoTy76';
-
 delete from moore_life_members where username = 'Left';
 delete from userkey where username = 'Left';
 delete from levelkey where username = 'Fella01'; 	
