@@ -10,8 +10,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
+        <style>
+body {
+     color: #ccffcc;
+}
+h1 {
+        color: #ccffcc;
+}
+p {
+        color: #ccffcc
+      
+} 
+ 
+</style>
+   
     </head>
-    <body>
+    
+    <body style="background-image: url(\xV5xj0m.jpg)">
     <center>
         <h1>This is the first story page.</h1>
     </center>
