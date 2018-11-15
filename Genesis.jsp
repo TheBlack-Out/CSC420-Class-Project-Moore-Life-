@@ -47,7 +47,7 @@ and open the template in the editor.
                 Lorenzo : There is most likely some violent winds still outside so beware as you venture out. 
                 <br></p>
             <form action = "SceneA.jsp" method = "post" >
-                <input type ="submit" value ="Continue"/>
+                <input type ="submit" value ="Proceed"/>
             </form>
             <br>
             <form action = "Welcome.jsp"> 
