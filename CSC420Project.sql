@@ -4,29 +4,42 @@ show tables;
 
 create table Moore_Life_Members (firstname varchar(45), lastname varchar(45), 
 email varchar(45), age int(3), username varchar(45) primary key, userpassword varchar (45));
+
 create table Userkey (username varchar(45), userkey int (7), 
 foreign key (username) references Moore_Life_Members(username));
+
 create table LevelKey (username varchar(45), levelkey int(4), 
 foreign key (username) references Moore_Life_Members(username));
+
 create table StoryGenre (GenreType varchar(30) not null, 
 StoryTitle varchar(30) not null, Description varchar(90) not null);
-create table Admin (firstname varchar(45), lastname varchar(45), role varchar(45));
-create table Achievements (achievement int not null auto_increment, description varchar(100) not null,
+
+create table Admin (firstname varchar(45), 
+lastname varchar(45), role varchar(45));
+
+create table Achievements (achievement varchar(100) not null auto_increment, description varchar(100) not null,
 primary key (achievement));
 
 drop table Moore_Life_Members;
 drop table Userkey;
 drop table levelkey;
 drop table StoryGenre;
+drop table Admin;
+drop table Achievements;
 
 insert into Moore_Life_Members values ('Felix', 'Crowley', 'fcrowley@email.com', '18', 'Fella01', 'MNoTy76');
+
 insert into LevelKey values ('Fella01', '1');
-insert into userkey values('Fella01', '4421');
+
+insert into Userkey values('Fella01', '4421');
+
 insert into StoryGenre values ('Action/Adventure', 'Cruzan Apocalypse', 
 'A Suspense/Thriller that takes place in the Dystopian Future of St. Croix');
+
 insert into Admin values ('Lorenzo','LaPlace','Lead Programmer');
 insert into Admin values ('Lakeesha','Laudat','Web Design/GUI');
 insert into Admin values ('KaJeede','Fanus','Co-Programmer/Database');
+
 insert into Achievements values ('Survivor', 'You made it to the end! Congratulations!');
 insert into Achievements values ('What a Noob', 'You made bad decisions at every turn. 
 Stop playing this game while you are at it.');
@@ -51,4 +64,4 @@ select * from LevelKey;
 select username from Moore_Life_Members where username ='Fella01' and userpassword ='MNoTy76';
 delete from moore_life_members where username = 'Left';
 delete from userkey where username = 'Left';
-delete from levelkey where username = 'Fella01'; 	
+delete from levelkey where username = 'Fella01';	
