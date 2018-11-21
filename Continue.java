@@ -100,26 +100,29 @@ public class Continue extends HttpServlet {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("select * from levelkey where username= '" + Username + "'");
 
-            while (rs.next()) {
+            if (rs.next()) {
 
                 if (rs.getObject("username").equals(Username) && rs.getObject("levelkey").equals(1)) {
-                    RequestDispatcher rd = request.getRequestDispatcher("StartGame.jsp");
+                    RequestDispatcher rd = request.getRequestDispatcher("Abstract.jsp");
                     rd.forward(request, response);
 
                 } else if (rs.getObject("username").equals(Username) && rs.getObject("levelkey").equals(2)) {
-                    RequestDispatcher rd = request.getRequestDispatcher("Chapter2.jsp");
+                    RequestDispatcher rd = request.getRequestDispatcher("Genesis.jsp");
                     rd.forward(request, response);
 
                 } else if (rs.getObject("username").equals(Username) && rs.getObject("levelkey").equals(3)) {
-                    RequestDispatcher rd = request.getRequestDispatcher("Chapter3.jsp");
+                    RequestDispatcher rd = request.getRequestDispatcher("SceneA.jsp");
                     rd.forward(request, response);
 
-                } else {
+                } 
+
+            }
+            
+            else {
                     RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
                     rd.forward(request, response);
                 }
-
-            }
+            
         } catch (Exception e) {
             pw.println(e);
         }
