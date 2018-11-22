@@ -1,0 +1,16 @@
+Ideas for SaveData feature in CSC420Project ---
+
+Use levelkeys and username in order to keep track of progress 
+Each level must have it's own levelkey 
+Each level has a save option that goes to the "SaveFeature" servlet. 
+*Currently researching online methods*
+*AJAX, and Javascript are two ways of going about this*
+*Will use Javascript*
+Each level page will have hidden variables to keep GUI clean 
+
+After hitting continue in the main menu ---- 
+If in servlet using sql select statement, if a levelkey of 3 and a username is entered 
+take the user to Game Page 3
+
+If on Alternate Path, do the same ---- but instead with 3x 
+thus taking the user to Game Page 3x 
