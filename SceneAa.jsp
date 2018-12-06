@@ -52,7 +52,7 @@
          </form>
 
         
-        <form name="SceneBb" action="SceneBa.jsp" method="POST">
+        <form name="SceneBb" action="SceneBb.jsp" method="POST">
         <center> 
             <input type = "submit" value = "Call out for help!" />
         </center>
