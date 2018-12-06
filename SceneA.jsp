@@ -13,14 +13,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <style>
-            html { background-image: url("file:///C:/Users/tyral/Pictures/absract.PNG");
+            html { background-image: url("Candle.jpg");
                    background-repeat: no-repeat;
                    background-size: 1300px 700px;
             }
             p{
-                border: 2px solid maroon;
+                border: 2px solid white;
                 font-size: large;
-                color: maroon;
+                color: white;
             }
         </style>
         
@@ -66,7 +66,7 @@
                 <input type ="submit" name = "Comp" value ="Seek Refuge at Complex">
             </form>
             
-            <form action = "SceneBa.jsp" method ="POST">
+            <form action = "SceneAb.jsp" method ="POST">
                 <input type="submit" name = "SFF" value ="Scavange for food nearby ">
             </form>
         </div>
