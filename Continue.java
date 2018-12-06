@@ -115,13 +115,14 @@ public class Continue extends HttpServlet {
                     rd.forward(request, response);
 
                 } 
+                
+                else {
+                    RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+                    rd.include(request, response);
+                }
 
             }
             
-            else {
-                    RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-                    rd.forward(request, response);
-                }
             
         } catch (Exception e) {
             pw.println(e);

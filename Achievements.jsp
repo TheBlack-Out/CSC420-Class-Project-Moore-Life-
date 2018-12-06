@@ -5,8 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-// WORK IN PROGRESS
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,4 +20,3 @@
     </center>
 </body>
 </html>
-

@@ -86,48 +86,45 @@ public class LoginArea extends HttpServlet {
         String driver = "com.mysql.jdbc.Driver";
 
         String dbUserName = "root";
-        String dbPassword = "Farfar22Aa";
+        String dbPassword = "TOl0Pok#4";
         String Username = request.getParameter("username");
         String Password = request.getParameter("password");
         String msg = " ";
         String msg2 = " ";
-        String msg3 = Username;
-        String msg4 = " ";
-        String msg5 = " ";
+        String msg3 = " ";
+        String msg4 = Username;
         String sentence = "You have been logged in ";
-        String sentence2 = "Welcome to MooreLife! ";
-        String sentence3 = "Sorry no user exists with that name or password ";
-        String sentence4 = "Sorry incorrect username / password ";
-        String sentence5 = ". ";
-        String sentence6 = "Please try again. ";
+        String sentence2 = "Welcome to MooreLife " + Username +  "! Enjoy the whimsy of fate ";
+        String sentence3 = "Sorry incorrect username / password. ";
+        String sentence4 = "Please try again. ";
+        String sentence5 = ".";
 
         try {
             Class.forName(driver).newInstance();
             conn = DriverManager.getConnection(url + dbName, dbUserName, dbPassword);
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("select * from moore_life_members where username= '" + Username + "' and userpassword= '" + Password + "'");
-            Boolean userfound = false;//initialize to false 
+
             if (rs.next()) {
 
                 if (rs.getObject("username").equals(Username)) {
-                    userfound = true;
-                    msg = "<font size='6' color=green>" + sentence + Username + "</font>";
-                    msg2 = "<font size='6' color=green>" + sentence2 + "</font>";
+                    msg = "<font size='6'>" + sentence2 + "</font>";
                     request.setAttribute("MESSAGE", msg);
                     request.setAttribute("MESSAGE2", msg2);
-                    request.setAttribute("MESSAGE3", msg3);
+                    request.setAttribute("MESSAGE3", msg4);
                     RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
                     rd.forward(request, response);
 
-                }   
+                }
 
             } else {
-                msg = "<font size='6' color=red>" + sentence4 + "</font>";
-                msg4 = "<font size='6' color=red>" + sentence5 + "</font>";
-                msg5 = "<font size='6' color=red>" + sentence6 + "</font>";
-                request.setAttribute("MESSAGE", msg);
-                request.setAttribute("MESSAGE2", msg4);
-                request.setAttribute("MESSAGE3", msg5);
+
+                msg = "<font size='6' color=red>" + sentence3 + "</font>";
+                msg2 = "<font size='6' color=red>" + sentence4 + "</font>";
+                msg3 = "<font size='6' color=red>" + sentence5 + "</font>";
+                request.setAttribute("MESSAGE4", msg);
+                request.setAttribute("MESSAGE5", msg2);
+                request.setAttribute("MESSAGE6", msg3);
                 RequestDispatcher rd = request.getRequestDispatcher("FailedLogin.jsp");
                 rd.include(request, response);
             }

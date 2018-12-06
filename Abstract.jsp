@@ -11,9 +11,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cruzan Apocolypse | Abstract</title>
         <style>
-            html { background-image: url("file:///C:/Users/tyral/Pictures/absract.PNG");
+            html { background-image: url("46495077_253110482028429_4454452535645700096_n.png");
                    background-repeat: no-repeat;
-                   background-size: 1300px 700px;
+                   background-size: cover;
             }
             p{
                 border: 2px solid maroon;
@@ -29,7 +29,7 @@
     <body><center>
         <br><br><br><br><br><br><br><br>
         <p>
-            What would you do if you witnessed the fall of your nation? 
+            What would you do if you witnessed the fall of your nation? <br>
             Virgin Islanders, along with many of our fellow Caribbean islanders and mainlanders, recently 
             had a firsthand experience on what it means to lose it all. On St. Croix, Hurricane Maria had 
             no mercy on the people. Taking homes and hope with her brute force winds of 175 Mph. 
@@ -48,8 +48,21 @@
          <form name="Genesis" action="Genesis.jsp" method="POST">
              <input type = "submit" value = "Proceed" />
          </form>
-         <form name="exit" action="Welcome.jsp" method="POST">
+        
+        <br/>
+        <br/>
+        <br/>
+        
+         <form name="exit" action="index.jsp" method="POST">
              <input type = "submit" value = "Exit" />
          </form>
     </center></body>
 </html>
+
+<script>
+    document.forms['Save'].elements['level key'].value = '1';
+</script>
+
+<%
+    session.setAttribute("levelkey", 1);
+%>

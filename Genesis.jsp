@@ -47,10 +47,11 @@ and open the template in the editor.
                 Lorenzo : There is most likely some violent winds still outside so beware as you venture out. 
                 <br></p>
             <form action = "SceneA.jsp" method = "post" >
-                <input type ="submit" value ="Proceed"/>
+                <input type ="submit" value ="Continue"/>
             </form>
             <br>
-            <form action = "Welcome.jsp"> 
+            <form action = "SaveCredentials.jsp"> 
+                <input type = "hidden" id="level key" name = "level key"  readonly>
                 <input type ="submit" value ="Save and Exit"/> <!-- function to save progress and go to home pg-->
             </form> 
 
@@ -58,3 +59,10 @@ and open the template in the editor.
     </body>
 </html>
 
+<script>
+    document.forms['Save'].elements['level key'].value = '2';
+</script>
+
+<%
+    session.setAttribute("levelkey", 2);
+%>
