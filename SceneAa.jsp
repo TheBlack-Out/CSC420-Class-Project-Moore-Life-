@@ -45,7 +45,7 @@
     <br/>
     <br/>
 
-         <form name="SceneBa" action="SceneBa.jsp" method="POST">
+         <form name="SceneBa" action="Death.jsp" method="POST">
          <center> 
             <input type = "submit" value = "Fight them alone" />
          </center>
