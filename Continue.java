@@ -116,6 +116,20 @@ public class Continue extends HttpServlet {
 
                 } 
                 
+                else if (rs.getObject("username").equals(Username) && rs.getObject("levelkey").equals(4)) {
+                    RequestDispatcher rd = request.getRequestDispatcher("SceneAa.jsp");
+                    rd.forward(request, response);
+                    
+
+                }
+                
+                else if (rs.getObject("username").equals(Username) && rs.getObject("levelkey").equals(4.0)) {
+                    RequestDispatcher rd = request.getRequestDispatcher("SceneBa.jsp");
+                    rd.forward(request, response);
+                    
+
+                }
+                
                 else {
                     RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
                     rd.include(request, response);

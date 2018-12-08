@@ -15,12 +15,26 @@
         <style>
             html { background-image: url("Candle.jpg");
                    background-repeat: no-repeat;
-                   background-size: 1300px 700px;
+                   background-size: 70%;
             }
             p{
                 border: 2px solid white;
                 font-size: large;
                 color: white;
+            }
+        </style>
+        
+        <style>
+            #proceed{
+                width: 12em;  height: 2em;
+                font-size: 15px;
+            }
+        </style>
+
+        <style>
+            #exit{
+                width: 12em;  height: 1.5em;
+                font-size: 15px;
             }
         </style>
         
@@ -61,14 +75,33 @@
               Kajeede: Let's go people. we will seek refuge at the complex.
               <br> <br>
               Lakeesha: No... Let's scavenge around this neighborhood for canned goods!
-            </p
+            </p>
             <form action = "SceneAa.jsp" method ="POST" >
-                <input type ="submit" name = "Comp" value ="Seek Refuge at Complex">
+                <input type ="submit" id="proceed" name = "Comp" value ="Seek Refuge at Complex">
             </form>
             
+            <br>
+            <br>
             <form action = "SceneAb.jsp" method ="POST">
-                <input type="submit" name = "SFF" value ="Scavange for food nearby ">
+                <input type="submit" id="proceed"  name = "SFF" value ="Scavange for food nearby ">
             </form>
         </div>
+        
+        <br>
+        <br>
+        <form name="Save" action="SaveCredentials.jsp" method="POST">
+        <center>
+            <input type = "hidden" id="level key" name = "level key"  readonly>
+            <input type = "submit" id=exit value = "Log out and Save" />
+        </center>
+    </form>
     </body>
 </html>
+
+<script>
+    document.forms['Save'].elements['level key'].value = '3';
+</script>
+
+<%
+    session.setAttribute("levelkey", 3);
+%>

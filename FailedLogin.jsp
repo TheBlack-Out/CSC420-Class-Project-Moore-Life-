@@ -27,7 +27,7 @@
         
         background-position:  1400px 240px, 200px 240px;
         background-repeat: no-repeat; 
-        background-size: 380px 380px;
+        background-size: 20%;
         
         
         
