@@ -52,7 +52,8 @@
             font-size: 14px;
         }
     </style>
-
+    <!-- Added more style tags for CSS design -->
+    <!-- Updated look and appearance of page buttons background -->
 
     <html>
         <head>
@@ -61,7 +62,7 @@
         </head>
         <body>
         <center>
-           
+
             <font color="#323267">  <h1> <%= msg%> &#x1F603 </h1>
             </font>
 
@@ -70,8 +71,8 @@
 
         <form name="Start Game" action="Abstract.jsp" method="POST">
             <br />
-            
-                <p style="text-indent: 16em" > <input type = "text" id="username" name = "username" readonly> </p>
+
+            <p style="text-indent: 16em" > <input type = "text" id="username" name = "username" readonly> </p>
 
                 <br/>
                 <br/>
@@ -107,11 +108,11 @@
     </html>
 
     <script>
-    document.forms['Start Game'].elements['username'].value = "<%= msg3%>'s session ";
+        document.forms['Start Game'].elements['username'].value = "<%= msg3%>'s session ";
     </script>
 
     <script>
-    document.forms['Welcome Back'].elements['otherusername'].value = "<%= msg3%>";
+        document.forms['Welcome Back'].elements['otherusername'].value = "<%= msg3%>";
     </script>
 
     <script>

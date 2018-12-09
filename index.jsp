@@ -58,6 +58,8 @@
                         font-size: 15px;
                     }
                 </style>
+                <!-- Added more style tags for CSS design -->
+                <!-- Updated look and appearance of page buttons background -->
 
 <html>
     <head>

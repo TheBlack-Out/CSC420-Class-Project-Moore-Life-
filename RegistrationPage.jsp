@@ -24,7 +24,8 @@
             font-size: 15px;
         }
     </style>
-
+    <!-- Added more style tags for CSS design -->
+    <!-- Updated look and appearance of page buttons background -->
 
     <html>
         <head>
@@ -106,7 +107,7 @@
         var y = document.getElementById("myage").value;
         if (y < 0 || y > 130) {
             alert("Enter an age less than 130 ");
-            
+
         }
         document.getElementById("demo2").innerHTML = y;
     }

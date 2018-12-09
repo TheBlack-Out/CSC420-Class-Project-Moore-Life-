@@ -40,6 +40,9 @@
                 color: maroon;
             }
         </style>
+        
+        <!-- Added more style tags for CSS design -->
+                <!-- Updated look and appearance of page buttons -->
     </head>
     <body><center>
         <br><br><br><br><br><br><br><br>
